@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>1</title>
+    <h3>Лабораторна.3 - Варіант.18 - Завдання.1 (4)</h3>
+</head>
+
+<body>
+
+<input name="Input" value=""> <br>
+
+<button type="button" onclick="Print()">Натисніть :)</button> <br>
+
+<script>
+
+let end = 0;
+
+function Print() {
+  
+  let Input = document.querySelector('input').value;
+
+  for (let i = Input; i > 0; i--) {
+    document.write('<br>' + i)
+  }
+
+  document.write('<br>' + end)
+  
+} 
+
+</script>
+</body>
+</html>

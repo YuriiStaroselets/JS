@@ -1,0 +1,27 @@
+<input type="radio" name="r1" value="5" onclick="myFunction()">перший<br>
+<input type="radio" name="r1" value="13" onclick="myFunction()">другий<br>
+<input type="radio" name="r1" value="53" onclick="myFunction()">третій<br>
+<input type="radio" name="r1" value="63" onclick="myFunction()">четвертий<br>
+<input type="radio" name="r1" value="73" onclick="myFunction()">пятий<br>
+<p id="demo"></p>
+
+<script>
+        function myFunction () {
+    const pTag = document.getElementById("demo")
+    var rad=document.getElementsByName('r1');
+    for (var i=0;i<rad.length; i++) {
+        if (rad[0].checked) {
+            pTag.innerText ='перший';
+        }else if (rad[1].checked) {
+            pTag.innerText ='другий';
+        }else if (rad[2].checked) {
+            pTag.innerText ='третій';
+        }else if (rad[3].checked) {
+            pTag.innerText ='четвертий';
+        }else if (rad[4].checked) {
+            pTag.innerText ='пятий';
+        }
+
+    }
+    }
+  </script>

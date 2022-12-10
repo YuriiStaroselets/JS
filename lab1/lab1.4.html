@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <title>12</title>
+  <h3>Lab 1.4.12</h3>
+</head>
+    
+<body>
+<script language="JavaScript">
+
+    var New_Window;
+    
+    function open_New_Window() {
+
+      New_Window = window.open("https://www.apple.com/", "apple", "top=200, left=10, width=600, height=500, location=no, scrollbars=yes, toolbar=no");
+
+    }
+
+    function close_New_Window() {
+
+      if (New_Window) {
+        New_Window.close();
+        New_Window = null;
+      }
+      
+    }
+
+</script>
+    
+    <form>
+      <input type="button" value="№1 Відкрити вікно" onClick="open_New_Window()">
+      <input type="button" value="№2 Закрити вікно" onClick="close_New_Window()">
+    </form>
+    
+</body>
+    
+</html>

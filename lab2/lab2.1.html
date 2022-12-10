@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<img
+    class="image"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Letter_A.svg/2048px-Letter_A.svg.png"
+    height="250"
+    width="250"
+/>
+<script>
+  let imageLinks = [
+		"https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Letter_A.svg/2048px-Letter_A.svg.png",
+		"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/LetterB.svg/640px-LetterB.svg.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/LetterC.svg/800px-LetterC.svg.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/LetterD.svg/1200px-LetterD.svg.png",
+  ]
+  let imageSelector = document.querySelector(".image");
+	window.onload = function () {
+		let index = 0;
+		imageSelector.src = imageLinks[index];
+		index++;
+		setInterval(() => {
+			imageSelector.src = imageLinks[index];
+			index++;
+			if (index === imageLinks.length) index = 0
+    }, 2 * 1000)
+  }
+
+</script>
+</body>
+</html>

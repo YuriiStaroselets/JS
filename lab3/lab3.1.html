@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> Лабораторна робота №3</title>
+</head>
+<body>
+<input id="text"> <br>
+<button type="button" onclick="myFunction()">Викликати функцію</button> <br>
+<p id="demo"></p>
+<script>
+	function myFunction() {
+		const inputField = document.getElementById("text").value.split(",").map(Number);
+		const pTag = document.getElementById("demo")
+		let flag = false;
+    for (let i = 0; i < inputField.length && !flag; i++) {
+			for (let j = i + 1; j < inputField.length && !flag; j++) {
+				if (inputField[i] === inputField[j]) flag = true;
+      }
+    }
+
+		if (flag) pTag.innerText = "ТАК";
+    else pTag.innerText = "НІ";
+	}
+</script>
+</body>
+</html>

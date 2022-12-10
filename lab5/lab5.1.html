@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<p>Comment 0</p>
+<!-- delete
+<p>Text 1</p>
+<p>Text 2</p>
+<p>Text 3</p>
+-->
+<p>Comment 1</p>
+<!--
+<p>Text 4</p>
+<p>Text 5</p>
+<p>Text 6</p>
+-->
+<!-- delete
+<p>Text 1</p>
+<p>Text 2</p>
+<p>Text 3</p>
+-->
+</div>
+
+<script>
+	document.querySelectorAll('*').forEach(el=>{
+		while(el = el.nextSibling){
+			if(el.nodeType === 8 && /^delete/.test(el.textContent.trim())) {
+				var fragment = document.createRange().createContextualFragment(el.textContent.trim().replace(/^delete/, ''));
+				el.parentNode.replaceChild(fragment, el);
+			}
+		}
+	});
+</script>
+</body>
+</html>

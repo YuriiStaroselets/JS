@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>lab 5.3</title>
+    </head>
+    <body>
+        <input type="text" id="n3Input"><br>
+        <button onclick="n3Transform()">Transform</button>
+        <script>
+            function n3Transform()
+            {
+                const input = document.getElementById('n3Input');
+                const initial_input = input.value.replaceAll(' ', '!');
+                input.value = initial_input;
+            }
+        </script>
+    </body>
+</html>
